@@ -4,19 +4,155 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MH لتصميم وتطوير المواقع والحلول الرقمية للأعمال.">
-  <title>MH | تصميم المواقع والحلول الرقمية</title>
-</head>
-<body>
-  <h1>مرحبًا بك في MH</h1>
-  <p>نحوّل نشاطك التجاري إلى حضور احترافي على الإنترنت.</p>
-  <p>موقع احترافي يصنع فرقًا في عملك، مع حلول ويب عملية مصممة لدعم نمو أعمالك.</p>
-  <a href="#contact">اطلب استشارة مجانية</a>
 
-  <section id="contact">
-    <h2>تواصل معنا</h2>
-    <p>نعمل على تجهيز قنوات التواصل ونموذج طلب الاستشارة.</p>
-  </section>
+  <meta name="description"
+        content="MH لتصميم وتطوير المواقع والحلول الرقمية للأعمال.">
+
+  <meta name="theme-color" content="#101b2a">
+
+  <title>MH | تصميم المواقع والحلول الرقمية</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <a class="skip-link" href="#app">
+    الانتقال إلى المحتوى
+  </a>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+
+      <a class="brand" href="?page=home" aria-label="MH الرئيسية">
+        <span class="brand-mark">MH</span>
+
+        <span class="brand-copy">
+          Web Design
+          <small>& Digital Solutions</small>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="فتح القائمة"
+        aria-expanded="false">
+
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
+
+        <a href="?page=home" data-nav="home">الرئيسية</a>
+        <a href="?page=services" data-nav="services">الخدمات</a>
+        <a href="?page=packages" data-nav="packages">الباقات</a>
+        <a href="?page=about" data-nav="about">من نحن</a>
+        <a href="?page=jobs" data-nav="jobs">الوظائف</a>
+        <a href="?page=contact" data-nav="contact">تواصل معنا</a>
+
+        <div class="nav-tools">
+          <button id="languageToggle" class="text-button" type="button">
+            English
+          </button>
+
+          <button
+            id="themeToggle"
+            class="icon-button"
+            type="button"
+            aria-label="تغيير المظهر">
+            ◐
+          </button>
+        </div>
+
+        <a class="button button-small nav-cta" href="?page=consultation">
+          اطلب استشارة
+        </a>
+
+      </nav>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1">
+    <div class="container loading">
+      جارٍ تحميل الموقع...
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div>
+        <a class="brand footer-brand" href="?page=home">
+          <span class="brand-mark">MH</span>
+
+          <span class="brand-copy">
+            Web Design
+            <small>& Digital Solutions</small>
+          </span>
+        </a>
+
+        <p data-i18n="footerDesc">
+          حلول ويب عملية تساعد نشاطك التجاري على بناء حضور رقمي احترافي.
+        </p>
+      </div>
+
+      <div>
+        <h3 data-i18n="footerLinks">روابط مهمة</h3>
+
+        <a href="?page=services" data-i18n="services">الخدمات</a>
+        <a href="?page=packages" data-i18n="packages">الباقات</a>
+        <a href="?page=jobs" data-i18n="jobs">الوظائف</a>
+        <a href="?page=contact" data-i18n="contact">تواصل معنا</a>
+      </div>
+
+      <div>
+        <h3 data-i18n="footerLegal">السياسات</h3>
+
+        <a href="?page=privacy" data-i18n="privacy">
+          سياسة الخصوصية
+        </a>
+
+        <a href="?page=terms" data-i18n="terms">
+          الشروط والأحكام
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+
+      <span>
+        © <span id="year"></span> MH.
+        <span data-i18n="rights">جميع الحقوق محفوظة.</span>
+      </span>
+
+      <button id="backToTop" class="back-top" type="button">
+        العودة للأعلى ↑
+      </button>
+
+    </div>
+  </footer>
+
+  <div
+    id="toast"
+    class="toast"
+    role="status"
+    aria-live="polite">
+  </div>
+
 </body>
 </html>
 ```
