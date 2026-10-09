@@ -1,109 +1,75 @@
-```html
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="description"
-        content="MH لتصميم وتطوير المواقع والحلول الرقمية للأعمال.">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#101b2a">
-
+  <meta name="description" content="MH لتصميم وتطوير المواقع والحلول الرقمية للأعمال.">
   <title>MH | تصميم المواقع والحلول الرقمية</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
-
-  <script src="script.js" defer></script>
+  <!-- مسارات نسبية تعمل مع GitHub Pages داخل مجلد المشروع -->
+  <link rel="stylesheet" href="./styles.css?v=2">
+  <script src="./script.js?v=2" defer></script>
 </head>
-
 <body>
-
-  <a class="skip-link" href="#app">
-    الانتقال إلى المحتوى
-  </a>
+  <a class="skip-link" href="#app">انتقل إلى المحتوى</a>
 
   <header class="site-header">
     <div class="container nav-wrap">
-
-      <a class="brand" href="?page=home" aria-label="MH الرئيسية">
+      <a class="brand" href="./?page=home" aria-label="MH الرئيسية">
         <span class="brand-mark">MH</span>
-
-        <span class="brand-copy">
-          Web Design
-          <small>& Digital Solutions</small>
+        <span class="brand-copy">MH Digital
+          <small>Web Design &amp; Digital Solutions</small>
         </span>
       </a>
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        type="button"
-        aria-label="فتح القائمة"
-        aria-expanded="false">
-
-        <span></span>
-        <span></span>
-        <span></span>
+      <button class="menu-toggle" id="menuToggle" type="button"
+        aria-label="فتح القائمة" aria-expanded="false">
+        <span></span><span></span><span></span>
       </button>
 
       <nav class="main-nav" id="mainNav" aria-label="القائمة الرئيسية">
-
-        <a href="?page=home" data-nav="home">الرئيسية</a>
-        <a href="?page=services" data-nav="services">الخدمات</a>
-        <a href="?page=packages" data-nav="packages">الباقات</a>
-        <a href="?page=about" data-nav="about">من نحن</a>
-        <a href="?page=jobs" data-nav="jobs">الوظائف</a>
-        <a href="?page=contact" data-nav="contact">تواصل معنا</a>
+        <a href="./?page=home" data-page="home">الرئيسية</a>
+        <a href="./?page=services" data-page="services">الخدمات</a>
+        <a href="./?page=packages" data-page="packages">الباقات</a>
+        <a href="./?page=about" data-page="about">من نحن</a>
+        <a href="./?page=jobs" data-page="jobs">الوظائف</a>
+        <a href="./?page=contact" data-page="contact">تواصل معنا</a>
 
         <div class="nav-tools">
-          <button id="languageToggle" class="text-button" type="button">
-            English
-          </button>
-
-          <button
-            id="themeToggle"
-            class="icon-button"
-            type="button"
-            aria-label="تغيير المظهر">
-            ◐
-          </button>
+          <button id="languageToggle" class="text-button" type="button">English</button>
+          <button id="themeToggle" class="icon-button" type="button"
+            aria-label="تغيير المظهر" title="تغيير المظهر">☾</button>
         </div>
 
-        <a class="button button-small nav-cta" href="?page=consultation">
+        <a class="button button-small nav-cta" href="./?page=consultation">
           اطلب استشارة
         </a>
-
       </nav>
     </div>
   </header>
 
   <main id="app" tabindex="-1">
-    <div class="container loading">
-      جارٍ تحميل الموقع...
-    </div>
+    <section class="container loading">
+      <div class="spinner" aria-hidden="true"></div>
+      جارٍ تحميل موقع MH...
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-grid">
-
       <div>
-        <a class="brand footer-brand" href="?page=home">
+        <a class="brand footer-brand" href="./?page=home">
           <span class="brand-mark">MH</span>
-
-          <span class="brand-copy">
-            Web Design
-            <small>& Digital Solutions</small>
+          <span class="brand-copy">MH Digital
+            <small>Web Design &amp; Digital Solutions</small>
           </span>
         </a>
-
         <p data-i18n="footerDesc">
           حلول ويب عملية تساعد نشاطك التجاري على بناء حضور رقمي احترافي.
         </p>
@@ -111,48 +77,28 @@
 
       <div>
         <h3 data-i18n="footerLinks">روابط مهمة</h3>
-
-        <a href="?page=services" data-i18n="services">الخدمات</a>
-        <a href="?page=packages" data-i18n="packages">الباقات</a>
-        <a href="?page=jobs" data-i18n="jobs">الوظائف</a>
-        <a href="?page=contact" data-i18n="contact">تواصل معنا</a>
+        <a href="./?page=services" data-i18n="services">الخدمات</a>
+        <a href="./?page=packages" data-i18n="packages">الباقات</a>
+        <a href="./?page=jobs" data-i18n="jobs">الوظائف</a>
+        <a href="./?page=contact" data-i18n="contact">تواصل معنا</a>
       </div>
 
       <div>
         <h3 data-i18n="footerLegal">السياسات</h3>
-
-        <a href="?page=privacy" data-i18n="privacy">
-          سياسة الخصوصية
-        </a>
-
-        <a href="?page=terms" data-i18n="terms">
-          الشروط والأحكام
-        </a>
+        <a href="./?page=privacy" data-i18n="privacy">سياسة الخصوصية</a>
+        <a href="./?page=terms" data-i18n="terms">الشروط والأحكام</a>
       </div>
-
     </div>
 
     <div class="container footer-bottom">
-
-      <span>
-        © <span id="year"></span> MH.
+      <span>© <span id="year"></span> MH.
         <span data-i18n="rights">جميع الحقوق محفوظة.</span>
       </span>
-
-      <button id="backToTop" class="back-top" type="button">
-        العودة للأعلى ↑
-      </button>
-
+      <button id="backToTop" class="back-top" type="button">العودة للأعلى ↑</button>
     </div>
   </footer>
 
-  <div
-    id="toast"
-    class="toast"
-    role="status"
-    aria-live="polite">
-  </div>
-
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript>يرجى تفعيل JavaScript حتى تعمل صفحات الموقع.</noscript>
 </body>
 </html>
-```
